@@ -9,7 +9,7 @@ const App: Component = () => {
       <h1 class='color-white rounded flex flex-row justify-center'>
         <div class='mt-10 flex flex-row '>
           <div>
-            <TiAnchor />
+            <TiAnchor color='white'/>
           </div>
           ashby shoal
         </div>
@@ -21,12 +21,9 @@ const App: Component = () => {
         <div>
           122°&nbsp;18'&nbsp;58"&nbsp;W
         </div>
-        <div>
-          San Francisco Station:&nbsp;9414290
-        </div>
         <a href='https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9414816'>tide</a>
         <a href='https://forecast.weather.gov/MapClick.php?textField1=37.50&textField2=-122.18'>weather</a>
-        <a href = "mailto: skipper@ashby-shoal.com">Send Email</a>
+        <a href="mailto: skipper@ashby-shoal.com">email</a>
       </div>
     </div>
   )
