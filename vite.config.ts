@@ -1,7 +1,16 @@
-import solid from "solid-start/vite";
-import netlify from "solid-start-netlify";
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
+import solidPlugin from 'vite-plugin-solid';
+import UnoCSS from 'unocss/vite'
 
 export default defineConfig({
-  plugins: [solid({ adapter: netlify() })],
+  plugins: [
+    UnoCSS(),
+    solidPlugin(),
+  ],
+  server: {
+    port: 3000,
+  },
+  build: {
+    target: 'esnext',
+  },
 });
