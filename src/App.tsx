@@ -8,7 +8,7 @@ const App: Component = () => {
     <div class='font-sans h-screen mb-20 mt-0 bg-blue rounded-2'>
       <h1 class='color-white rounded flex flex-row justify-center'>
         <div class='mt-10 flex flex-row '>
-          ashby<TiAnchor color='white'/>shoal
+          ashby<TiAnchor fill-opacity='50%'/>shoal
         </div>
       </h1>
       <main>
@@ -24,11 +24,11 @@ const App: Component = () => {
             <span>
               <a href='https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9414816'>tide</a>
             </span>
-            <span class='text-red-900'> | </span>
+            <span class='text-transparent'> | </span>
             <span>
             <a href='https://forecast.weather.gov/MapClick.php?textField1=37.50&textField2=-122.18'>weather</a>
             </span>
-            <span class='text-green-900'> | </span>
+            <span class='text-transparent'> | </span>
             <span>
               <a href="mailto: skipper@ashby-shoal.com">email</a>
             </span>
