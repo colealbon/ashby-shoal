@@ -1,13 +1,43 @@
 import type {
   Component
 } from 'solid-js';
+import { createSignal } from 'solid-js'
 import { TiAnchor } from 'solid-icons/ti'
 
 const App: Component = () => {
+  function createStoredSignal<T>(
+    key: string,
+    defaultValue: T,
+    storage = localStorage
+  ): Signal<T> {
+    const initialValue = storage.getItem(key) != undefined
+      ? JSON.parse(`${storage.getItem(key)}`) as T
+      : defaultValue;
+    const [value, setValue] = createSignal<T>(initialValue);
+    const setValueAndStore = ((arg: any) => {
+      const v = setValue(arg);
+      storage.setItem(key, JSON.stringify(v));
+      return v;
+    }) as typeof setValue;
+    return [value, setValueAndStore];
+  }
+
+  const [latestGeoLocation, setLatestGeoLocation] = createStoredSignal('latestGeolocation', null)
+
+  // createEffect(() => {
+  //   function getLocation() {
+  //     if (navigator.geolocation) {
+  //       navigator.geolocation.getCurrentPosition((current => setCurrentPosition(current));
+  //     } else {
+  //       //x.innerHTML = "Geolocation is not supported by this browser.";
+  //     }
+  //   }
+  // })
+
   return (
-    <div class='font-sans h-screen mb-20 mt-0 bg-blue rounded-2'>
+    <div class='font-sans h-screen bg-blue'>
       <h1 class='color-white rounded flex flex-row justify-center'>
-        <div class='mt-10 flex flex-row '>
+        <div class='mt-20 flex flex-row '>
           ashby<TiAnchor fill-opacity='50%'/>shoal
         </div>
       </h1>
