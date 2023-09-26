@@ -35,7 +35,7 @@ const App: Component = () => {
   // })
 
   return (
-    <div class='font-sans h-screen bg-blue'>
+    <div class='font-sans h-screen bg-blue bg-cover;'>
       <h1 class='color-white rounded flex flex-row justify-center'>
         <div class='mt-20 flex flex-row '>
           ashby<TiAnchor fill-opacity='50%'/>shoal
