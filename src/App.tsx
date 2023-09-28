@@ -52,15 +52,19 @@ const App: Component = () => {
           </div>
           <div class='w-full flex-content-between'>
             <span>
-              <a href='https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9414816'>tide</a>
+              <a target="_blank" href='https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9414816'>tide</a>
             </span>
             <span class='text-transparent'> | </span>
             <span>
-            <a href='https://forecast.weather.gov/MapClick.php?textField1=37.50&textField2=-122.18'>weather</a>
+            <a target="_blank" href='https://forecast.weather.gov/MapClick.php?textField1=37.50&textField2=-122.18'>weather</a>
             </span>
             <span class='text-transparent'> | </span>
             <span>
               <a href="mailto: skipper@ashby-shoal.com">email</a>
+            </span>
+            <span class='text-transparent'> | </span>
+            <span>
+              <a target="_blank" href="https://matrix.to/#/#ashby-shoal:matrix.org">chat</a>
             </span>
           </div>
 
